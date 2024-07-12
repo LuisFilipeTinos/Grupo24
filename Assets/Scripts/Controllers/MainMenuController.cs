@@ -5,12 +5,19 @@ using UnityEngine;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] LevelLoaderController levelLoader;
+    
     public async void TutorialScreen()
     {
-        await levelLoader.LoadLevel(Enums.Scenes.SceneTest2);
+        await levelLoader.LoadLevel(Enums.Scenes.TutorialScreen);
     }
-    public async void DialogueTestScreen()
+
+    public async void CreditsScreen()
     {
-        await levelLoader.LoadLevel(Enums.Scenes.SceneTest3);
+        await levelLoader.LoadLevel(Enums.Scenes.CreditsScreen);
     }
+
+    //public async void DialogueTestScreen()
+    //{
+    //    await levelLoader.LoadLevel(Enums.Scenes.SceneTest3);
+    //}
 }

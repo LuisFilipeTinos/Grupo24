@@ -8,6 +8,6 @@ public class TutorialScreenController : MonoBehaviour
 
     public async void BackToMainMenu()
     {
-        await levelLoader.LoadLevel(Enums.Scenes.SceneTest1);
+        await levelLoader.LoadLevel(Enums.Scenes.InitialScreen);
     }
 }
