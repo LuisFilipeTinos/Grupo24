@@ -16,8 +16,14 @@ public class MainMenuController : MonoBehaviour
         await levelLoader.LoadLevel(Enums.Scenes.CreditsScreen);
     }
 
-    //public async void DialogueTestScreen()
-    //{
-    //    await levelLoader.LoadLevel(Enums.Scenes.SceneTest3);
-    //}
+    public void ExitGame()
+    {
+        Debug.Log("Fechou a aplicação");
+        Application.Quit();
+    }
+
+    public async void InitialDialogScreen()
+    {
+        await levelLoader.LoadLevel(Enums.Scenes.InitialDialogScreen);
+    }
 }

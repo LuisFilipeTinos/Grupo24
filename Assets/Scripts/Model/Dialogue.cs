@@ -9,5 +9,5 @@ public class Dialogue : ScriptableObject
     [TextArea(1, 5)]
     private string[] dialogue;
 
-    public string[] GetDialogue => dialogue;
+    public string[] GetDialogue => dialogue; 
 }

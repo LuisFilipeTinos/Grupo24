@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DialogueTest
   m_EditorClassIdentifier: 
   dialogue:
-  - Teste de frase 1
-  - Teste de frase 2
-  - Teste final
+  - "Ol\xE1, meu jovem! Seja bem-vindo ao jogo da minha vida!"
+  - "Ao longo dessa jornada, voc\xEA poder\xE1 conhecer e desvendar um pouco mais
+    sobre a minha miss\xE3o."
+  - "Voc\xEA aceita iniciar esta aventura comigo?"

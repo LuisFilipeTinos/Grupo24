@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/CenaCredito.unity
     guid: 5f345cce2aacc5f4ebe9de14809cf800
   - enabled: 1
-    path: Assets/Scenes/DialogueTestScreen.unity
-    guid: 9dcfdc3c3aa795340a1db263b632b5a5
+    path: Assets/Scenes/InitialDialogueScreen.unity
+    guid: 924c35e65a2823b48b5dcd9f819542df
   - enabled: 0
     path: Assets/Scenes/DatabaseExample.unity
     guid: 5f743992a18016d48a76e0c5fcbf337c
