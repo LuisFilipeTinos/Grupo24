@@ -9,6 +9,7 @@ public static class Enums
         InitialScreen = 0,
         TutorialScreen = 1,
         CreditsScreen = 2,
-        InitialDialogScreen = 3
+        InitialDialogScreen = 3,
+        LevelOneStartScreen = 4
     }
 }

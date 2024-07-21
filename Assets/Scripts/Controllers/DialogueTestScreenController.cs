@@ -38,10 +38,17 @@ public class DialogueTestScreenController : MonoBehaviour
             btnNextSentenceText.text = "VAMOS LÁ!";
             btnBackToMainMenu.SetActive(true);
         }
+        else if (dialogueController.GetIndex() == 0)
+            await AdvanceToLevelOne();
     }
 
     public async void BackToMainMenu()
     {
         await levelLoaderController.LoadLevel(Enums.Scenes.InitialScreen);
+    }
+
+    public async Task AdvanceToLevelOne()
+    {
+        await levelLoaderController.LoadLevel(Enums.Scenes.LevelOneStartScreen);
     }
 }

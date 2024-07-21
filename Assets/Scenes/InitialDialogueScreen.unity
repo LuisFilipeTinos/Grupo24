@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogText: {fileID: 147970265}
-  dialogSpeed: 0.06
+  dialogSpeed: 0.02
   dialogueBoxAnim: {fileID: 948664153}
   dialogueAvatarAnim: {fileID: 1567211821}
 --- !u!4 &656398742
