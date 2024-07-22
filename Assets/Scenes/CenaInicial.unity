@@ -1288,7 +1288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203282449023898779, guid: 4fe7ef3eb8586f14bacbd6d187a98f3c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4288183744434511682, guid: 4fe7ef3eb8586f14bacbd6d187a98f3c, type: 3}
       propertyPath: transitionAnim

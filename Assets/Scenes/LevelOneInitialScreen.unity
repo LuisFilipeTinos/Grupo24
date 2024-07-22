@@ -447,6 +447,7 @@ GameObject:
   - component: {fileID: 1185518106}
   - component: {fileID: 1185518108}
   - component: {fileID: 1185518107}
+  - component: {fileID: 1185518109}
   m_Layer: 5
   m_Name: Event
   m_TagString: Untagged
@@ -470,8 +471,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011206, y: 19.749}
-  m_SizeDelta: {x: 547.5585, y: 223.9988}
+  m_AnchoredPosition: {x: 109.6979, y: 15.875}
+  m_SizeDelta: {x: 437.9358, y: 231.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1185518107
 MonoBehaviour:
@@ -493,7 +494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 403382777426319416, guid: 87d4ea8d69983344a876abb7488400ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -511,6 +512,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185518105}
   m_CullTransparentMesh: 1
+--- !u!95 &1185518109
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185518105}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32b6af55b8b872f4aa6fc392065119cf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1205861909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -694,6 +717,14 @@ PrefabInstance:
     - target: {fileID: 2025375943788805789, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2250552205191667101, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933400547370445924, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6943704031989540819, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
