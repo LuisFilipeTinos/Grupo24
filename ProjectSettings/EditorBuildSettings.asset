@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/DatabaseExample.unity
     guid: 5f743992a18016d48a76e0c5fcbf337c
   - enabled: 1
+    path: Assets/Scenes/LevelOneInitialScreen.unity
+    guid: f8016ec3bd73ddc42b4874e6007e5d07
+  - enabled: 1
+    path: Assets/Scenes/MemoriaMaterial.unity
+    guid: 30aa606965c0c0041b8a0f1d9841a9c2
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

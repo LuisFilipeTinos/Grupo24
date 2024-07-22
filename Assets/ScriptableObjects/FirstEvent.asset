@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12c39feac39e40c47b5cd8ae6d6ddcab, type: 3}
-  m_Name: DialogueTest
+  m_Name: FirstEvent
   m_EditorClassIdentifier: 
   dialogue:
-  - "Ol\xE1, meu jovem! Seja bem-vindo ao jogo da minha vida!"
-  - "Ao longo dessa jornada, voc\xEA poder\xE1 conhecer e desvendar um pouco mais
-    sobre a minha miss\xE3o."
-  - "Voc\xEA aceita iniciar esta aventura comigo?"
+  - Essa imagem reflete um momento muito importante de minha vida.
+  - "Vamos jogar um jogo? Te explico os detalhes sobre esse momento ap\xF3s nosso
+    desafio! "

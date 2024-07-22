@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueTestScreenController : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class DialogueTestScreenController : MonoBehaviour
             btnBackToMainMenu.SetActive(true);
         }
         else if (dialogueController.GetIndex() == 0)
-            await AdvanceToLevelOne();
+            await AdvanceToNextSceneInBuildIndex();
     }
 
     public async void BackToMainMenu()
@@ -47,8 +48,8 @@ public class DialogueTestScreenController : MonoBehaviour
         await levelLoaderController.LoadLevel(Enums.Scenes.InitialScreen);
     }
 
-    public async Task AdvanceToLevelOne()
+    public async Task AdvanceToNextSceneInBuildIndex()
     {
-        await levelLoaderController.LoadLevel(Enums.Scenes.LevelOneStartScreen);
+        await levelLoaderController.LoadLevelWithIndex(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -15,4 +15,11 @@ public class LevelLoaderController : MonoBehaviour
         await Awaitable.WaitForSecondsAsync(transitionTime);
         SceneManager.LoadScene((int)sceneIndex);
     }
+
+    public async Task LoadLevelWithIndex(int index)
+    {
+        transitionAnim.SetTrigger("Start");
+        await Awaitable.WaitForSecondsAsync(transitionTime);
+        SceneManager.LoadScene(index);
+    }
 }
