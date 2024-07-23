@@ -31,24 +31,24 @@ public class CardController : MonoBehaviour
 
         if (isFlipped)
         {
-            for (var i = 0f; i <= 180; i += 10f)
+            for (var i = 180f; i <= 360; i += 10f)
             {
                 rectTransform.rotation = Quaternion.Euler(0, i, 0);
-                if (i == 90) CardImage.sprite = Controller.CardBack;
+                if (i == 270) CardImage.sprite = Controller.CardBack;
                 isFlipped = false;
                 yield return new WaitForSeconds(0.01f);
-                rectTransform.rotation = Quaternion.Euler(0, 0, 0);
+                //rectTransform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
         else
         {
-            for (var i = 180f; i >= 0f; i -= 10f)
+            for (var i = 360f; i >= 180f; i -= 10f)
             {
                 rectTransform.rotation = Quaternion.Euler(0, i, 0);
-                if (i == 90) CardImage.sprite = Controller.CardData[id].cardSprite;
+                if (i == 270) CardImage.sprite = Controller.CardData[id].cardSprite;
                 isFlipped = true;
                 yield return new WaitForSeconds(0.01f);
-                rectTransform.rotation = Quaternion.Euler(0, 0, 0);
+                //rectTransform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
     }
