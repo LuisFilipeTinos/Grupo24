@@ -8,23 +8,28 @@ using Random = UnityEngine.Random;
 public class GameplayController : MonoBehaviour
 {
     //Imagem Padrão
-    [field: Header("Cartas")] [field: SerializeField]
+    [field: Header("Cartas")]
+    [field: SerializeField]
     public Sprite CardBack { get; set; }
 
     [field: SerializeField] public JogoMemoriaImagemCard[] CardData { get; private set; } // Imagens das cartas
 
-    [field: Space] [field: Header("Tamanho")] [field: SerializeField]
+    [field: Space]
+    [field: Header("Tamanho")]
+    [field: SerializeField]
     private int GridSizeX { get; set; }
 
     [field: SerializeField] private int GridSizeY { get; set; }
 
     [SerializeField] private GameObject[] slots;
-    [field: Space] [field: Header("Sons")] private AudioSource AudioSource { get; set; }
+    [field: Space][field: Header("Sons")] private AudioSource AudioSource { get; set; }
     [SerializeField] private AudioClip SomClick { get; set; }
     [SerializeField] private AudioClip SomUnmatch { get; set; }
     [SerializeField] private AudioClip SomMatch { get; set; }
 
-    [Space] [Header("Components")] [SerializeField]
+    [Space]
+    [Header("Components")]
+    [SerializeField]
     private GameObject cardPrefab; // Prefab da carta
 
     public GameObject toastPrefab;
@@ -39,11 +44,13 @@ public class GameplayController : MonoBehaviour
 
     [SerializeField] LevelLoaderController levelLoaderController;
 
-
     private void Start()
     {
         artifactController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
         artifactPointsText = GameObject.FindGameObjectWithTag("PointText").GetComponent<TextMeshProUGUI>();
+
+        var actualPoints = artifactController.artifactPoints.GetPoints();
+        artifactPointsText.text = actualPoints.ToString();
 
         Components();
         Shuffle(CardData);
@@ -136,19 +143,12 @@ public class GameplayController : MonoBehaviour
             FlippedCards[0].Match();
             FlippedCards[1].Match();
 
-            //Lógica para a pontuação e armazenamento provisório em um objeto non-destructable:
-            var isFirstCardArtifact = FlippedCards[0].CheckForArtifacts();
-            var isSecondCardArtifact = FlippedCards[1].CheckForArtifacts();
+            //Aumento dos pontos:
+            var actualPoints = artifactController.artifactPoints.GetPoints();
+            artifactController.artifactPoints.SetPoints(actualPoints + 1);
 
-            if (isFirstCardArtifact && isSecondCardArtifact)
-            {
-                //Aumento dos pontos:
-                var actualPoints = artifactController.artifactPoints.GetPoints();
-                artifactController.artifactPoints.SetPoints(actualPoints + 1);
-
-                //Alteração visual do elemento gráfico responsável por essa alteração;
-                artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
-            }
+            //Alteração visual do elemento gráfico responsável por essa alteração;
+            artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
 
             MatchedCards.Add(FlippedCards[0]);
             MatchedCards.Add(FlippedCards[1]);
@@ -180,6 +180,6 @@ public class GameplayController : MonoBehaviour
 
     public void SoundPlay(AudioClip audio)
     {
-//        AudioSource.PlayOneShot(audio);
+        //        AudioSource.PlayOneShot(audio);
     }
 }

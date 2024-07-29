@@ -5,10 +5,9 @@ using UnityEngine;
 public class ArtifactPointsController : MonoBehaviour
 {
     public ArtifactPoints artifactPoints;
-    void Start()
+    void Awake()
     {
         artifactPoints = new ArtifactPoints();
-        artifactPoints.SetPoints(0);
     }
 
     void Update()
