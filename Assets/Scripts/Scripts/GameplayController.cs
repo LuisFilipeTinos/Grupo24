@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class GameplayController : MonoBehaviour
@@ -32,8 +34,17 @@ public class GameplayController : MonoBehaviour
     [field: SerializeField] private List<CardController> FlippedCards { get; set; } // Lista das cartas viradas
     private List<CardController> MatchedCards { get; set; } // Lista das cartas combinadas
 
+    ArtifactPointsController artifactController;
+    TextMeshProUGUI artifactPointsText;
+
+    [SerializeField] LevelLoaderController levelLoaderController;
+
+
     private void Start()
     {
+        artifactController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
+        artifactPointsText = GameObject.FindGameObjectWithTag("PointText").GetComponent<TextMeshProUGUI>();
+
         Components();
         Shuffle(CardData);
         FlippedCards = new List<CardController>();
@@ -125,6 +136,20 @@ public class GameplayController : MonoBehaviour
             FlippedCards[0].Match();
             FlippedCards[1].Match();
 
+            //Lógica para a pontuação e armazenamento provisório em um objeto non-destructable:
+            var isFirstCardArtifact = FlippedCards[0].CheckForArtifacts();
+            var isSecondCardArtifact = FlippedCards[1].CheckForArtifacts();
+
+            if (isFirstCardArtifact && isSecondCardArtifact)
+            {
+                //Aumento dos pontos:
+                var actualPoints = artifactController.artifactPoints.GetPoints();
+                artifactController.artifactPoints.SetPoints(actualPoints + 1);
+
+                //Alteração visual do elemento gráfico responsável por essa alteração;
+                artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
+            }
+
             MatchedCards.Add(FlippedCards[0]);
             MatchedCards.Add(FlippedCards[1]);
 
@@ -149,8 +174,8 @@ public class GameplayController : MonoBehaviour
         yield return new WaitUntil(() =>
             !FindFirstObjectByType<ToastScript>() && !FindFirstObjectByType<CardController>());
         Debug.Log("ganhou");
-        var obj = Instantiate(winPrefab);
-        obj.SetActive(true);
+
+        levelLoaderController.LoadLevelWithIndex(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void SoundPlay(AudioClip audio)

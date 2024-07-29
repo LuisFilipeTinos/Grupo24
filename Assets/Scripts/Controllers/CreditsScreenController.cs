@@ -8,6 +8,6 @@ public class CreditsScreenController : MonoBehaviour
 
     public async void BackToInitialScreen()
     {
-        await LevelLoaderController.LoadLevel(Enums.Scenes.InitialScreen);
+        await LevelLoaderController.LoadLevelAsync(Enums.Scenes.InitialScreen);
     }
 }

@@ -188,7 +188,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Caixa_de_Dialogo_0: 2861160277077977549
+      Caixa_de_Dialogo_1: -2196365182898368290
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

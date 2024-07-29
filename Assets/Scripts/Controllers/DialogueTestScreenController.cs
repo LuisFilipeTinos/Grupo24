@@ -45,11 +45,11 @@ public class DialogueTestScreenController : MonoBehaviour
 
     public async void BackToMainMenu()
     {
-        await levelLoaderController.LoadLevel(Enums.Scenes.InitialScreen);
+        await levelLoaderController.LoadLevelAsync(Enums.Scenes.InitialScreen);
     }
 
     public async Task AdvanceToNextSceneInBuildIndex()
     {
-        await levelLoaderController.LoadLevelWithIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        await levelLoaderController.LoadLevelWithIndexAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

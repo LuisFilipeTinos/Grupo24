@@ -21,11 +21,17 @@ EditorBuildSettings:
     path: Assets/Scenes/DatabaseExample.unity
     guid: 5f743992a18016d48a76e0c5fcbf337c
   - enabled: 1
-    path: Assets/Scenes/LevelOneInitialScreen.unity
+    path: Assets/Scenes/LevelOne/LevelOneInitialScreen.unity
     guid: f8016ec3bd73ddc42b4874e6007e5d07
   - enabled: 1
-    path: Assets/Scenes/LevelOneScreen.unity
+    path: Assets/Scenes/LevelOne/LevelOneScreen.unity
     guid: 30aa606965c0c0041b8a0f1d9841a9c2
+  - enabled: 1
+    path: Assets/Scenes/LevelOne/LevelOneFinalScreen.unity
+    guid: e081e61db340d2740b25d6c94993bef7
+  - enabled: 1
+    path: Assets/Scenes/LevelTwo/LevelTwoScreen.unity
+    guid: d30eed90e91449d408dbd410cb819835
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729

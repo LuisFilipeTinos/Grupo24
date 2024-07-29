@@ -164,7 +164,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tela alternativa de fundo_0: -3374223464111654612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

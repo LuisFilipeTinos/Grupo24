@@ -164,7 +164,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pro_reitoria_0: 1730819519676593981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

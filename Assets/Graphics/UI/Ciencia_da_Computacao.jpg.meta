@@ -164,7 +164,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ciencia_da_Computacao_0: -4848207706486754797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7847384603935993076}
   m_Layer: 5
   m_Name: Memoria
-  m_TagString: Untagged
+  m_TagString: Artifact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

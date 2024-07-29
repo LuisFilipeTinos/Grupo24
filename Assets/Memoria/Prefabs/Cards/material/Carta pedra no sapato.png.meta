@@ -164,7 +164,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Carta pedra no sapato_0: -3075835081349375007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

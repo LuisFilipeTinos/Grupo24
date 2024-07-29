@@ -8,12 +8,12 @@ public class MainMenuController : MonoBehaviour
     
     public async void TutorialScreen()
     {
-        await levelLoader.LoadLevel(Enums.Scenes.TutorialScreen);
+        await levelLoader.LoadLevelAsync(Enums.Scenes.TutorialScreen);
     }
 
     public async void CreditsScreen()
     {
-        await levelLoader.LoadLevel(Enums.Scenes.CreditsScreen);
+        await levelLoader.LoadLevelAsync(Enums.Scenes.CreditsScreen);
     }
 
     public void ExitGame()
@@ -24,6 +24,6 @@ public class MainMenuController : MonoBehaviour
 
     public async void InitialDialogScreen()
     {
-        await levelLoader.LoadLevel(Enums.Scenes.InitialDialogScreen);
+        await levelLoader.LoadLevelAsync(Enums.Scenes.InitialDialogScreen);
     }
 }
