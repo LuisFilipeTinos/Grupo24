@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InitialDialogueScreen.unity
     guid: 924c35e65a2823b48b5dcd9f819542df
-  - enabled: 0
-    path: Assets/Scenes/DatabaseExample.unity
-    guid: 5f743992a18016d48a76e0c5fcbf337c
   - enabled: 1
     path: Assets/Scenes/LevelOne/LevelOneInitialScreen.unity
     guid: f8016ec3bd73ddc42b4874e6007e5d07
@@ -30,8 +27,14 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelOne/LevelOneFinalScreen.unity
     guid: e081e61db340d2740b25d6c94993bef7
   - enabled: 1
+    path: Assets/Scenes/LevelTwo/LevelTwoInitialScreen.unity
+    guid: 351f8921416c3124fad3fe8d3acf56dc
+  - enabled: 1
     path: Assets/Scenes/LevelTwo/LevelTwoScreen.unity
     guid: d30eed90e91449d408dbd410cb819835
+  - enabled: 1
+    path: Assets/Scenes/LevelTwo/LevelTwoFinalScreen.unity
+    guid: ebed5d39f8d5cb549ae5a20bde3c2528
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
