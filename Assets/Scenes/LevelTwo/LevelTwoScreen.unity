@@ -754,15 +754,15 @@ PrefabInstance:
     - target: {fileID: 1453080592103852951, guid: 9e42e1c3b326f214b9ea51a63be0ec50, type: 3}
       propertyPath: '<CardData>k__BackingField.Array.data[6]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4c6dd0c405aa10b4e8cf336930dd1884, type: 2}
+      objectReference: {fileID: 11400000, guid: a625adbf8c76dce45b0476100b986fbe, type: 2}
     - target: {fileID: 1453080592103852951, guid: 9e42e1c3b326f214b9ea51a63be0ec50, type: 3}
       propertyPath: '<CardData>k__BackingField.Array.data[7]'
       value: 
-      objectReference: {fileID: 11400000, guid: 16499f8350df83c43a05738fde8664b5, type: 2}
+      objectReference: {fileID: 11400000, guid: 3131e4b8fb00719479c5a3a14510420c, type: 2}
     - target: {fileID: 1453080592103852951, guid: 9e42e1c3b326f214b9ea51a63be0ec50, type: 3}
       propertyPath: '<CardData>k__BackingField.Array.data[8]'
       value: 
-      objectReference: {fileID: 11400000, guid: bc1ee5199fe006744b010a83e8c927ea, type: 2}
+      objectReference: {fileID: 11400000, guid: 350e5f2bfee04e943bec7edf40224a0a, type: 2}
     - target: {fileID: 4902818913137183929, guid: 9e42e1c3b326f214b9ea51a63be0ec50, type: 3}
       propertyPath: m_Name
       value: Settings
