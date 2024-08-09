@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Cruz
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -138912328951267567, guid: bc936c5db6b8e61438dc42bbfb8fcd01, type: 3}
+  cardName: Cruz
+  cardDescription: "[Descri\xE7\xE3o]"

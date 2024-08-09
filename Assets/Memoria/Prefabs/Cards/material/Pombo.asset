@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Pombo
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -7670794876795667218, guid: 93f405ccaff3b98448f66c1f0743465a, type: 3}
+  cardName: Pombo
+  cardDescription: "[Descri\xE7\xE3o]"

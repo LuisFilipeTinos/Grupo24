@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Pena
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -7115386695771749793, guid: b1eaf9e2c344f514190d395e68e6ce15, type: 3}
+  cardName: Pena
+  cardDescription: "[Descri\xE7\xE3o]"

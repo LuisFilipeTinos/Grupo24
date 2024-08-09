@@ -6,4 +6,6 @@ using UnityEngine;
 public class JogoMemoriaImagemCard : ScriptableObject
 {
     public Sprite cardSprite;
+    public string cardName;
+    public string cardDescription;
 }

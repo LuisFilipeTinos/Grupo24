@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class GameplayController : MonoBehaviour
@@ -44,13 +45,19 @@ public class GameplayController : MonoBehaviour
 
     [SerializeField] LevelLoaderController levelLoaderController;
 
+    [SerializeField] Image popupWindowCardImage;
+    [SerializeField] TextMeshProUGUI popupWindowCardTitle;
+    [SerializeField] TextMeshProUGUI popupWindowCardDescription;
+    [SerializeField] Animator popupWindowAnim;
+    [SerializeField] Animator popupFadeAnim;
+
     private void Start()
     {
-        artifactController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
-        artifactPointsText = GameObject.FindGameObjectWithTag("PointText").GetComponent<TextMeshProUGUI>();
+        //artifactController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
+        //artifactPointsText = GameObject.FindGameObjectWithTag("PointText").GetComponent<TextMeshProUGUI>();
 
-        var actualPoints = artifactController.artifactPoints.GetPoints();
-        artifactPointsText.text = actualPoints.ToString();
+        //var actualPoints = artifactController.artifactPoints.GetPoints();
+        //artifactPointsText.text = actualPoints.ToString();
 
         Components();
         Shuffle(CardData);
@@ -140,18 +147,25 @@ public class GameplayController : MonoBehaviour
         {
             //SoundPlay(SomMatch);
 
+            //Seta as informações da match na popupwindow:
+            popupWindowCardImage.sprite = CardData[FlippedCards[0].id].cardSprite;
+            popupWindowCardTitle.text = CardData[FlippedCards[0].id].cardName;
+            popupWindowCardDescription.text = CardData[FlippedCards[0].id].cardDescription;
+
             FlippedCards[0].Match();
             FlippedCards[1].Match();
 
             //Aumento dos pontos:
-            var actualPoints = artifactController.artifactPoints.GetPoints();
-            artifactController.artifactPoints.SetPoints(actualPoints + 1);
+            //var actualPoints = artifactController.artifactPoints.GetPoints();
+            //artifactController.artifactPoints.SetPoints(actualPoints + 1);
 
             //Alteração visual do elemento gráfico responsável por essa alteração;
-            artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
+            //artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
 
             MatchedCards.Add(FlippedCards[0]);
             MatchedCards.Add(FlippedCards[1]);
+
+            StartCoroutine(PopUpInAnimations());
 
             if (MatchedCards.Count == GridSizeX * GridSizeY)
             {
@@ -168,6 +182,20 @@ public class GameplayController : MonoBehaviour
         FlippedCards.Clear();
     }
 
+    private IEnumerator PopUpInAnimations()
+    {
+        popupFadeAnim.Play("FadeIn");
+        yield return new WaitForSeconds(.10f);
+        popupWindowAnim.Play("PopupWindowIn");
+    }
+
+    private IEnumerator PopUpOutAnimations()
+    {
+        popupFadeAnim.Play("FadEOut");
+        yield return new WaitForSeconds(.10f);
+        popupWindowAnim.Play("PopupWindowOut");
+    }
+
     private IEnumerator WinCoroutine()
     {
         yield return new WaitForSeconds(.5f);
@@ -181,5 +209,15 @@ public class GameplayController : MonoBehaviour
     public void SoundPlay(AudioClip audio)
     {
         //        AudioSource.PlayOneShot(audio);
+    }
+
+    public void ClosePopupButton()
+    {
+        StartCoroutine(PopUpOutAnimations());
+
+        if (MatchedCards.Count == GridSizeX * GridSizeY)
+        {
+            StartCoroutine(WinCoroutine());
+        }
     }
 }

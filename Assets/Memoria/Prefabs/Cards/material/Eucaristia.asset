@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Eucaristia
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -5871967497920641926, guid: 60593f88dcb93a6408733821f0ff67c8, type: 3}
+  cardName: Eucaristia
+  cardDescription: "[Descri\xE7\xE3o]"

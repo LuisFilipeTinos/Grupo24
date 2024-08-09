@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Igreja
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -4335519635737191531, guid: 6ef7d7c467d6dc54ba1cd99682528f15, type: 3}
+  cardName: Igreja
+  cardDescription: "[Descri\xE7\xE3o]"

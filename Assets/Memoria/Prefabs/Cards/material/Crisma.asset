@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Crisma
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -5829496048217901958, guid: 9d897f77ab9bb0e4eaad037d333293f7, type: 3}
+  cardName: Crisma
+  cardDescription: "[Descri\xE7\xE3o]"

@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: "Di\xE1rio"
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 6281893516391628210, guid: bfa87726293e7be4aaf50638ff179c89, type: 3}
+  cardName: "Di\xE1rio"
+  cardDescription: "[Descri\xE7\xE3o]"

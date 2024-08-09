@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Lamparina
   m_EditorClassIdentifier: 
   cardSprite: {fileID: -7233457235559771712, guid: 8a67216ccdcd86c418402830d8566fc9, type: 3}
+  cardName: Lamparina
+  cardDescription: "[Descri\xE7\xE3o]"

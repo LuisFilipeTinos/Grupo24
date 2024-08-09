@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: "B\xEDblia"
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 632218460847282404, guid: a515ce7717af3d343acf03d64f296209, type: 3}
+  cardName: "B\xEDblia"
+  cardDescription: "[Descri\xE7\xE3o]"
