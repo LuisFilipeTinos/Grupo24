@@ -19,9 +19,9 @@ public class DialogueTestScreenController : MonoBehaviour
 
     async void Start()
     {
-        await Awaitable.WaitForSecondsAsync(1.5f);
+        await Awaitable.WaitForSecondsAsync(1f);
         dialogueController.OpenDialogueAnim();
-        await Awaitable.WaitForSecondsAsync(0.4f);
+        await Awaitable.WaitForSecondsAsync(1.5f);
         await dialogueController.NextSentence(dialogueTest);
         btnNextSentence.SetActive(true);
     }

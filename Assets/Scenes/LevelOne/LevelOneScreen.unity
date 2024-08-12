@@ -523,6 +523,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 773330801}
+    - target: {fileID: 7782672149428862642, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClosePopupButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782672149428862642, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8528062196746299250, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
       propertyPath: m_Pivot.x
       value: 0

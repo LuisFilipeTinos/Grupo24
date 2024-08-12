@@ -37,8 +37,10 @@ public class DialogueController : MonoBehaviour
     {
         if (index <= dialogueObject.GetDialogue.Length - 1)
         {
+            dialogueAvatarAnim.Play("AvatarTalkingInit");
             dialogText.text = string.Empty;
             await TypeWriterEffect(dialogueObject);
+            dialogueAvatarAnim.Play("AvatarIdleInScreen");
         }
         else
         {

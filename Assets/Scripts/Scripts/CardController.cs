@@ -56,7 +56,19 @@ public class CardController : MonoBehaviour
     public void Match()
     {
         Debug.Log("Formou par!");
+        StartCoroutine(FadeImageToAlphaZero());
         Destroy(this.gameObject, 1f);
+    }
+
+    public IEnumerator FadeImageToAlphaZero()
+    {
+        float alpha = 1f;
+        for (float i = 1; i > 0.0f; i = i - 0.1f)
+        {
+            alpha = alpha - 0.10f;
+            CardImage.color = new Color(1, 1, 1, alpha);
+            yield return new WaitForSeconds(0.009f);
+        }
     }
 
     public bool CheckForArtifacts()
