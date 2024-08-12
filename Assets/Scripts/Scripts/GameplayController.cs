@@ -40,8 +40,14 @@ public class GameplayController : MonoBehaviour
     [field: SerializeField] private List<CardController> FlippedCards { get; set; } // Lista das cartas viradas
     private List<CardController> MatchedCards { get; set; } // Lista das cartas combinadas
 
+    [Space]
+    [Header("Points and Touches Attributes and Components")]
     ArtifactPointsController artifactController;
     TextMeshProUGUI artifactPointsText;
+
+    TouchPointsController touchPointsController;
+    TextMeshProUGUI touchPointsText;
+
 
     [SerializeField] LevelLoaderController levelLoaderController;
 
@@ -53,11 +59,17 @@ public class GameplayController : MonoBehaviour
 
     private void Start()
     {
-        //artifactController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
-        //artifactPointsText = GameObject.FindGameObjectWithTag("PointText").GetComponent<TextMeshProUGUI>();
+        artifactController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
+        artifactPointsText = GameObject.FindGameObjectWithTag("PointText").GetComponent<TextMeshProUGUI>();
 
-        //var actualPoints = artifactController.artifactPoints.GetPoints();
-        //artifactPointsText.text = actualPoints.ToString();
+        touchPointsController = GameObject.FindGameObjectWithTag("TouchController").GetComponent<TouchPointsController>();
+        touchPointsText = GameObject.FindGameObjectWithTag("TouchText").GetComponent<TextMeshProUGUI>();
+
+        var actualPoints = artifactController.artifactPoints.GetPoints();
+        artifactPointsText.text = actualPoints.ToString();
+
+        var actualTouchPoints = touchPointsController.touchPoints.GetQuantityOfTouches();
+        touchPointsText.text = actualTouchPoints.ToString();
 
         Components();
         Shuffle(CardData);
@@ -127,6 +139,13 @@ public class GameplayController : MonoBehaviour
 
     public void FlipCard(CardController card)
     {
+        //Aumento do touch:
+        var actualTouches = touchPointsController.touchPoints.GetQuantityOfTouches() + 1;
+        touchPointsController.touchPoints.SetQuantityOfTouches(actualTouches);
+
+        //Alteração gráfica (text):
+        touchPointsText.text = actualTouches.ToString();
+
         if (!card.isFlipped && FlippedCards.Count < 2)
         {
             StartCoroutine(card.Flip());
@@ -156,21 +175,21 @@ public class GameplayController : MonoBehaviour
             FlippedCards[1].Match();
 
             //Aumento dos pontos:
-            //var actualPoints = artifactController.artifactPoints.GetPoints();
-            //artifactController.artifactPoints.SetPoints(actualPoints + 1);
+            var actualPoints = artifactController.artifactPoints.GetPoints();
+            artifactController.artifactPoints.SetPoints(actualPoints + 1);
 
             //Alteração visual do elemento gráfico responsável por essa alteração;
-            //artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
+            artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
 
             MatchedCards.Add(FlippedCards[0]);
             MatchedCards.Add(FlippedCards[1]);
 
             StartCoroutine(PopUpInAnimations());
 
-            if (MatchedCards.Count == GridSizeX * GridSizeY)
-            {
-                StartCoroutine(WinCoroutine());
-            }
+            //if (MatchedCards.Count == GridSizeX * GridSizeY)
+            //{
+            //    StartCoroutine(WinCoroutine());
+            //}
         }
         else
         {
@@ -194,6 +213,11 @@ public class GameplayController : MonoBehaviour
         popupFadeAnim.Play("FadEOut");
         yield return new WaitForSeconds(.10f);
         popupWindowAnim.Play("PopupWindowOut");
+
+        if (MatchedCards.Count == GridSizeX * GridSizeY)
+        {
+            StartCoroutine(WinCoroutine());
+        }
     }
 
     private IEnumerator WinCoroutine()

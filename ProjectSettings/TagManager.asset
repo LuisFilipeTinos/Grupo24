@@ -7,6 +7,8 @@ TagManager:
   - Artifact
   - ArtifactController
   - PointText
+  - TouchController
+  - TouchText
   layers:
   - Default
   - TransparentFX
