@@ -17,6 +17,9 @@ public class DialogueTestScreenController : MonoBehaviour
 
     [SerializeField] LevelLoaderController levelLoaderController;
 
+    ArtifactPointsController artifactPointsController;
+    TouchPointsController touchPointsController;
+
     async void Start()
     {
         await Awaitable.WaitForSecondsAsync(1f);
@@ -45,6 +48,15 @@ public class DialogueTestScreenController : MonoBehaviour
 
     public async void BackToMainMenu()
     {
+        artifactPointsController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
+        touchPointsController = GameObject.FindGameObjectWithTag("TouchController").GetComponent<TouchPointsController>();
+
+        if (artifactPointsController != null)
+            Destroy(artifactPointsController);
+
+        if (touchPointsController != null)
+            Destroy(touchPointsController);
+
         await levelLoaderController.LoadLevelAsync(Enums.Scenes.InitialScreen);
     }
 

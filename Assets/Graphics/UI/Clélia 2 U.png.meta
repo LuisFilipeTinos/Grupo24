@@ -137,12 +137,12 @@ TextureImporter:
       name: "Cl\xE9lia 2 U_0"
       rect:
         serializedVersion: 2
-        x: 170
+        x: 92
         y: 71
-        width: 182
+        width: 337
         height: 615
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,14 +157,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 41ff8b2049697f44dbf8f98422a6aea9
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Cl\xE9lia 2 U_0": 7893728428241081913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

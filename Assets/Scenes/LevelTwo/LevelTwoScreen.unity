@@ -376,6 +376,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6799150398396996835, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799150398396996835, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799150398396996835, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1185638968}
+    - target: {fileID: 6799150398396996835, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799150398396996835, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExchangePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799150398396996835, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799150398396996835, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7558448432097084692, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -768,6 +796,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1104762226}
     - target: {fileID: 1453080592103852951, guid: 9e42e1c3b326f214b9ea51a63be0ec50, type: 3}
+      propertyPath: exchangeArtifactPoints
+      value: 
+      objectReference: {fileID: 1823959571}
+    - target: {fileID: 1453080592103852951, guid: 9e42e1c3b326f214b9ea51a63be0ec50, type: 3}
       propertyPath: <GridSizeX>k__BackingField
       value: 6
       objectReference: {fileID: 0}
@@ -921,6 +953,17 @@ RectTransform:
   m_AnchoredPosition: {x: 485, y: -62.789}
   m_SizeDelta: {x: 143.8591, y: 143.8591}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1823959571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6799150398396996835, guid: bbba7d42f527af140bce7bfe3c78cfff, type: 3}
+  m_PrefabInstance: {fileID: 909697337}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

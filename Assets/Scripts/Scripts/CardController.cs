@@ -11,20 +11,16 @@ public class CardController : MonoBehaviour
     public bool isFlipped;
     public Image CardImage { get; set; }
     private GameplayController Controller { get; set; }
-
     private void Awake()
     {
         Controller = FindFirstObjectByType<GameplayController>();
         CardImage = gameObject.GetComponentInChildren<Image>();
         isFlipped = false;
     }
-
     private void Start()
     {
         GetComponent<Button>().onClick.AddListener(() => Controller.FlipCard(this));
     }
-
-
     public IEnumerator Flip()
     {
         var rectTransform = GetComponent<RectTransform>();

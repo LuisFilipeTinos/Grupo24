@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueController : MonoBehaviour
 {
@@ -37,10 +38,34 @@ public class DialogueController : MonoBehaviour
     {
         if (index <= dialogueObject.GetDialogue.Length - 1)
         {
-            dialogueAvatarAnim.Play("AvatarTalkingInit");
+            var sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            var postAnimationString = string.Empty;
+
+            if (sceneIndex == (int)Enums.Scenes.InitialDialogScreen)
+            {
+                dialogueAvatarAnim.Play("AvatarTalkingInit");
+                postAnimationString = "AvatarIdleInScreen";
+            }
+            else if (sceneIndex == (int)Enums.Scenes.LevelOneStartScreen || sceneIndex == (int)Enums.Scenes.LevelOneFinalScreen)
+            {
+                dialogueAvatarAnim.Play("AvatarTalkingLevel1");
+                postAnimationString = "AvatarIdleLevel1";
+            }
+            else if (sceneIndex == (int)Enums.Scenes.LevelTwoStartScreen || sceneIndex == (int)Enums.Scenes.LevelTwoFinalScreen)
+            {
+                dialogueAvatarAnim.Play("AvatarTalkingLevel2");
+                postAnimationString = "AvatarIdleLevel2";
+            }
+            else if (sceneIndex == (int)Enums.Scenes.LevelThreeStartScreen || sceneIndex == (int)Enums.Scenes.LevelThreeFinalScreen)
+            {
+                dialogueAvatarAnim.Play("AvatarTalkingLevel3");
+                postAnimationString = "AvatarIdleLevel3";
+            }
+
             dialogText.text = string.Empty;
             await TypeWriterEffect(dialogueObject);
-            dialogueAvatarAnim.Play("AvatarIdleInScreen");
+            dialogueAvatarAnim.Play(postAnimationString);
+            
         }
         else
         {

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -39,6 +40,7 @@ public class GameplayController : MonoBehaviour
     private List<int> _availableIDs; // Lista de IDs disponíveis para as cartas
     [field: SerializeField] private List<CardController> FlippedCards { get; set; } // Lista das cartas viradas
     private List<CardController> MatchedCards { get; set; } // Lista das cartas combinadas
+    private List<CardController> AllRemainingCards { get; set; } // Lista de todas as cartas disponíveis
 
     [Space]
     [Header("Points and Touches Attributes and Components")]
@@ -57,6 +59,8 @@ public class GameplayController : MonoBehaviour
     [SerializeField] Animator popupWindowAnim;
     [SerializeField] Animator popupFadeAnim;
 
+    [SerializeField] Button exchangeArtifactPoints;
+
     private void Start()
     {
         artifactController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
@@ -71,10 +75,17 @@ public class GameplayController : MonoBehaviour
         var actualTouchPoints = touchPointsController.touchPoints.GetQuantityOfTouches();
         touchPointsText.text = actualTouchPoints.ToString();
 
+        //Lógica para habilitar/desabilitar o botão de acordo com a quantidade de pontos que o usuário tem:
+        if (actualPoints >= 5)
+            exchangeArtifactPoints.interactable = true;
+        else
+            exchangeArtifactPoints.interactable = false;
+
         Components();
         Shuffle(CardData);
         FlippedCards = new List<CardController>();
         MatchedCards = new List<CardController>();
+        AllRemainingCards = new List<CardController>();
         InitializeCards();
     }
 
@@ -111,6 +122,8 @@ public class GameplayController : MonoBehaviour
                 var card = cardObj.GetComponent<CardController>();
 
                 card.id = _availableIDs[index];
+
+                AllRemainingCards.Add(card);
             }
         }
     }
@@ -137,19 +150,22 @@ public class GameplayController : MonoBehaviour
     }
 
 
-    public void FlipCard(CardController card)
+    public void FlipCard(CardController card, bool fromExchange = false)
     {
-        //Aumento do touch:
-        var actualTouches = touchPointsController.touchPoints.GetQuantityOfTouches() + 1;
-        touchPointsController.touchPoints.SetQuantityOfTouches(actualTouches);
+        if (!fromExchange)
+        {
+            //Aumento do touch:
+            var actualTouches = touchPointsController.touchPoints.GetQuantityOfTouches() + 1;
+            touchPointsController.touchPoints.SetQuantityOfTouches(actualTouches);
 
-        //Alteração gráfica (text):
-        touchPointsText.text = actualTouches.ToString();
+            //Alteração gráfica (text):
+            touchPointsText.text = actualTouches.ToString();
+        }
 
         if (!card.isFlipped && FlippedCards.Count < 2)
         {
             StartCoroutine(card.Flip());
-            SoundPlay(SomClick);
+            //SoundPlay(SomClick);
             FlippedCards.Add(card);
             if (FlippedCards.Count == 2)
             {
@@ -165,6 +181,9 @@ public class GameplayController : MonoBehaviour
         if (FlippedCards[0].id == FlippedCards[1].id)
         {
             //SoundPlay(SomMatch);
+            //Remove as cartas que deram match da lista de cards disponíveis:
+            AllRemainingCards.Remove(FlippedCards[0]);
+            AllRemainingCards.Remove(FlippedCards[1]);
 
             //Seta as informações da match na popupwindow:
             popupWindowCardImage.sprite = CardData[FlippedCards[0].id].cardSprite;
@@ -177,6 +196,9 @@ public class GameplayController : MonoBehaviour
             //Aumento dos pontos:
             var actualPoints = artifactController.artifactPoints.GetPoints();
             artifactController.artifactPoints.SetPoints(actualPoints + 1);
+
+            if (artifactController.artifactPoints.GetPoints() >= 5 && !exchangeArtifactPoints.interactable)
+                exchangeArtifactPoints.interactable = true;
 
             //Alteração visual do elemento gráfico responsável por essa alteração;
             artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
@@ -243,5 +265,26 @@ public class GameplayController : MonoBehaviour
         {
             StartCoroutine(WinCoroutine());
         }
+    }
+
+    public void ExchangePoints()
+    {
+        var actualPoints = artifactController.artifactPoints.GetPoints() - 5;
+        artifactController.artifactPoints.SetPoints(actualPoints);
+
+        //Alteração visual do elemento gráfico responsável por essa alteração;
+        artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
+
+        if (artifactController.artifactPoints.GetPoints() < 5 && exchangeArtifactPoints.interactable)
+            exchangeArtifactPoints.interactable = false;
+
+        var index = Random.Range(0, AllRemainingCards.Count);
+
+        var cardOne = AllRemainingCards[index];
+        var cardTwo = AllRemainingCards.Where(x => x.id == cardOne.id && x != cardOne).FirstOrDefault();
+
+        //Flipa as duas cartas simultaneamente
+        FlipCard(cardOne, true);
+        FlipCard(cardTwo, true);
     }
 }
