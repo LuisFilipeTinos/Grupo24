@@ -6,6 +6,12 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField] LevelLoaderController levelLoader;
     
+    void Start()
+    {
+        Application.targetFrameRate = -1;
+        Application.targetFrameRate = 60;
+    }
+
     public async void TutorialScreen()
     {
         await levelLoader.LoadLevelAsync(Enums.Scenes.TutorialScreen);

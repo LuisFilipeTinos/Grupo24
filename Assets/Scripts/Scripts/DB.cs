@@ -6,7 +6,6 @@ using Mono.Data.Sqlite;
 using System.Data;
 using TMPro;
 using System.Threading;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine.SceneManagement;
 
 //A Fazer
