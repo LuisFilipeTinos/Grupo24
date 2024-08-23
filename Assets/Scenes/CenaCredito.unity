@@ -1412,8 +1412,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -413, y: -84.9996}
-  m_SizeDelta: {x: 509.71997, y: 186.4973}
+  m_AnchoredPosition: {x: -409.43002, y: -96.96697}
+  m_SizeDelta: {x: 509.72, y: 255.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026942085
 MonoBehaviour:
@@ -1436,7 +1436,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Karina Zaniti Sanches\nLaura Lonardoni Paulino Schiavon\nLucas Le\xE3o
-    Franco Paes\nThiago de Carvalho Galli"
+    Franco Paes\nRyan Taquita Konda\nThiago de Carvalho Galli\nYemuri Wanderlei Teodoro"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1463,8 +1463,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.48
-  m_fontSizeBase: 26.48
+  m_fontSize: 22.4
+  m_fontSizeBase: 22.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2198,8 +2198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 390, y: -85}
-  m_SizeDelta: {x: 571.33, y: 186.5}
+  m_AnchoredPosition: {x: 389.96, y: -96.966965}
+  m_SizeDelta: {x: 571.33, y: 255.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833424963
 MonoBehaviour:
@@ -2221,8 +2221,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ariane Fernandes do Nascimento\nDaniel Shinji Onoue\nEduardo Peres Bishop\nJo\xE3o
-    Matheus Ver\xEDssimo Francisco\n\n"
+  m_text: "Ariane Fernandes do Nascimento\nCaio Cezar Firbida Martins\nDaniel Shinji
+    Onoue\nEduardo Peres Bishop\nFernando Eduardo Motta Mendes \nGuilherme Henrique
+    Carloni de Carvalho\nJo\xE3o Matheus Ver\xEDssimo Francisco\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2249,8 +2250,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.48
-  m_fontSizeBase: 26.48
+  m_fontSize: 22.4
+  m_fontSizeBase: 22.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
