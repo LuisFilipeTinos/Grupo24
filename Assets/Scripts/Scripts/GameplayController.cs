@@ -152,6 +152,8 @@ public class GameplayController : MonoBehaviour
 
     public void FlipCard(CardController card, bool fromExchange = false)
     {
+        exchangeArtifactPoints.interactable = false;
+
         if (!fromExchange)
         {
             //Aumento do touch:
@@ -197,9 +199,6 @@ public class GameplayController : MonoBehaviour
             var actualPoints = artifactController.artifactPoints.GetPoints();
             artifactController.artifactPoints.SetPoints(actualPoints + 1);
 
-            if (artifactController.artifactPoints.GetPoints() >= 5 && !exchangeArtifactPoints.interactable)
-                exchangeArtifactPoints.interactable = true;
-
             //Alteração visual do elemento gráfico responsável por essa alteração;
             artifactPointsText.text = artifactController.artifactPoints.GetPoints().ToString();
 
@@ -221,6 +220,9 @@ public class GameplayController : MonoBehaviour
         }
 
         FlippedCards.Clear();
+
+        if (artifactController.artifactPoints.GetPoints() >= 5 && !exchangeArtifactPoints.interactable)
+            exchangeArtifactPoints.interactable = true;
     }
 
     private IEnumerator PopUpInAnimations()

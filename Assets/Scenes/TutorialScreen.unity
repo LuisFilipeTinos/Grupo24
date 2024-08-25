@@ -853,9 +853,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.27450982}
-    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.27450982}
-    m_SelectedColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0.27450982}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -959,7 +959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0037017, y: 10}
+  m_AnchoredPosition: {x: 0.0037017, y: 17}
   m_SizeDelta: {x: 742.8911, y: 160.8726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494081750
@@ -982,14 +982,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Durante o di\xE1logo com Madre Cl\xE9lia, voc\xEA ser\xE1 apresentado
-    a tr\xEAs jogos da mem\xF3ria. \n\nA ideia \xE9 simples: encontre todos os pares
-    para concluir a fase com a menor quantidade de toques ou cliques nas cartas poss\xEDvel.
-    Ou seja, quanto menor for a sua quantidade de toques, melhor voc\xEA se sair\xE1!
-    \n\nA cada par encontrado, um ponto \xE9 somado ao total de pontos, ao lado do
-    bot\xE3o \"Resgatar\". \n\nVoc\xEA pode utilizar 5 pontos para \"resgatar\" um
-    par do jogo da mem\xF3ria e minimizar sua quantidade de toques nas cartas, clicando
-    no bot\xE3o \"Resgatar\".\n\nPreparado para esta aventura? \n"
+  m_text: "A ideia \xE9 simples: encontre todos os pares para concluir a fase com
+    a menor quantidade de toques ou cliques nas cartas poss\xEDvel. \n\nA cada par
+    encontrado, um ponto \xE9 somado ao total de pontos, ao lado do bot\xE3o \"Resgatar\".
+    \n\nVoc\xEA pode utilizar 5 pontos para \"resgatar\" um par do jogo da mem\xF3ria
+    e minimizar sua quantidade de toques nas cartas, clicando no bot\xE3o \"Resgatar\".\n\nPreparado
+    para esta aventura? \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1016,8 +1014,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 16.1
+  m_fontSizeBase: 16.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1181,8 +1179,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0037038, y: -102}
-  m_SizeDelta: {x: 523.5181, y: 54.8024}
+  m_AnchoredPosition: {x: 0.0037003, y: -86}
+  m_SizeDelta: {x: 439.5069, y: 54.8024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591225142
 MonoBehaviour:
@@ -1232,8 +1230,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 16.3
+  m_fontSizeBase: 16.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -132,6 +132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 3203282449023898779, guid: 4fe7ef3eb8586f14bacbd6d187a98f3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7202891934203578800, guid: 4fe7ef3eb8586f14bacbd6d187a98f3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 334.83182
@@ -245,6 +249,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1303129658}
     - target: {fileID: 3047496536425134132, guid: 3120cf148a84f6842907c32bf3225924, type: 3}
+      propertyPath: btnSkipDialogue
+      value: 
+      objectReference: {fileID: 2070678902}
+    - target: {fileID: 3047496536425134132, guid: 3120cf148a84f6842907c32bf3225924, type: 3}
       propertyPath: btnBackToMainMenu
       value: 
       objectReference: {fileID: 1303129657}
@@ -288,6 +296,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 40995721684270617, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 40995721684270617, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 40995721684270617, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1122207882}
+    - target: {fileID: 40995721684270617, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 40995721684270617, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SkipDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 40995721684270617, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueTestScreenController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 40995721684270617, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 497448981175775798, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -703,6 +739,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aebaffaf0a2ef54c939573550e6ad18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2070678902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7995594038989188167, guid: 121a2e0431ccdd4459f35cca3483ba91, type: 3}
+  m_PrefabInstance: {fileID: 1303129652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FirstEvent
   m_EditorClassIdentifier: 
   dialogue:
-  - Essa imagem reflete um momento muito importante de minha vida.
+  - Esta imagem reflete um momento muito importante de minha vida.
   - "Que tal eu te explicar um pouco mais sobre ele ap\xF3s um divertido jogo da
     mem\xF3ria?"
   - "O jogo \xE9 simples: voc\xEA deve encontrar todos os pares de imagens."
