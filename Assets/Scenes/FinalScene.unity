@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 159.00002, y: -277}
+  m_AnchoredPosition: {x: 121.00002, y: -251}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &94831580
@@ -290,8 +290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000011444, y: -337}
-  m_SizeDelta: {x: 214.1403, y: 57.083405}
+  m_AnchoredPosition: {x: 0.000011444, y: -307}
+  m_SizeDelta: {x: 161.9357, y: 41.2104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122862686
 MonoBehaviour:
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 187407149}
   - component: {fileID: 187407148}
   m_Layer: 0
-  m_Name: Credits_BG_0
+  m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,8 +577,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -7.4549, y: -137}
-  m_SizeDelta: {x: 493.441, y: 58.97751}
+  m_AnchoredPosition: {x: 0, y: -133}
+  m_SizeDelta: {x: 419.3932, y: 58.9775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693153204
 MonoBehaviour:
@@ -627,8 +627,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.1
-  m_fontSizeBase: 25.1
+  m_fontSize: 24.8
+  m_fontSizeBase: 24.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1611,7 +1611,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 8.09
+      value: 14.1
       mode: 0
       spread: 0
       speed:
@@ -5665,8 +5665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -7.455, y: -199.068}
-  m_SizeDelta: {x: 578.2166, y: 354.78003}
+  m_AnchoredPosition: {x: -0.000017166, y: -179.89}
+  m_SizeDelta: {x: 504.1384, y: 316.644}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061063712
 MonoBehaviour:
@@ -5950,8 +5950,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.55
-  m_fontSizeBase: 37.55
+  m_fontSize: 26.2
+  m_fontSizeBase: 26.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6034,8 +6034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -7.455, y: -85}
-  m_SizeDelta: {x: 529.4595, y: 109.81021}
+  m_AnchoredPosition: {x: -0.000015259, y: -54}
+  m_SizeDelta: {x: 250.6912, y: 50.2131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1309458635
 MonoBehaviour:
@@ -6084,8 +6084,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.38
-  m_fontSizeBase: 51.38
+  m_fontSize: 42.11
+  m_fontSizeBase: 42.11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7019,7 +7019,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 8.09
+      value: 14.1
       mode: 0
       spread: 0
       speed:
@@ -11073,7 +11073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -69, y: -271}
+  m_AnchoredPosition: {x: -107, y: -245}
   m_SizeDelta: {x: 232.5969, y: 36.208984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1692829075
@@ -11207,8 +11207,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -7.4549, y: -199.068}
-  m_SizeDelta: {x: 709.9323, y: 58.97751}
+  m_AnchoredPosition: {x: -0.000015259, y: -179.89}
+  m_SizeDelta: {x: 439.8755, y: 58.9775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871209140
 MonoBehaviour:
@@ -11258,8 +11258,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.1
-  m_fontSizeBase: 23.1
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

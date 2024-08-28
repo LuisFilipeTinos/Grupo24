@@ -71,10 +71,10 @@ public class DialogueTestScreenController : MonoBehaviour
         touchPointsController = GameObject.FindGameObjectWithTag("TouchController").GetComponent<TouchPointsController>();
 
         if (artifactPointsController != null)
-            Destroy(artifactPointsController);
+            Destroy(artifactPointsController.gameObject);
 
         if (touchPointsController != null)
-            Destroy(touchPointsController);
+            Destroy(touchPointsController.gameObject);
 
         await levelLoaderController.LoadLevelAsync(Enums.Scenes.InitialScreen);
     }
