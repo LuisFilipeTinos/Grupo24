@@ -154,21 +154,21 @@ public class GameplayController : MonoBehaviour
     {
         exchangeArtifactPoints.interactable = false;
 
-        if (!fromExchange)
-        {
-            //Aumento do touch:
-            var actualTouches = touchPointsController.touchPoints.GetQuantityOfTouches() + 1;
-            touchPointsController.touchPoints.SetQuantityOfTouches(actualTouches);
-
-            //Alteração gráfica (text):
-            touchPointsText.text = actualTouches.ToString();
-        }
-
         if (!card.isFlipped && FlippedCards.Count < 2)
         {
+            if (!fromExchange)
+            {
+                //Aumento do touch:
+                var actualTouches = touchPointsController.touchPoints.GetQuantityOfTouches() + 1;
+                touchPointsController.touchPoints.SetQuantityOfTouches(actualTouches);
+
+                //Alteração gráfica (text):
+                touchPointsText.text = actualTouches.ToString();
+            }
+
+            FlippedCards.Add(card);
             StartCoroutine(card.Flip());
             //SoundPlay(SomClick);
-            FlippedCards.Add(card);
             if (FlippedCards.Count == 2)
             {
                 StartCoroutine(CheckForMatch());

@@ -14,7 +14,7 @@ public class FinalScreenController : MonoBehaviour
     {
         artifactPointsController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
         touchPointsController = GameObject.FindGameObjectWithTag("TouchController").GetComponent<TouchPointsController>();
-        textTouchTotal.text = touchPointsController.touchPoints.GetQuantityOfTouches().ToString();
+        textTouchTotal.text = "Toques em cartas: " + touchPointsController.touchPoints.GetQuantityOfTouches().ToString();
     }
     public void BackToMainMenu()
     {
