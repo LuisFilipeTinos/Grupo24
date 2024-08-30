@@ -1,0 +1,5 @@
+D:/Usuario/Desktop/UNITY FILES/Grupo24/.utmp/RelWithDebInfo/4f2y5jt6/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Usuario/Desktop/UNITY FILES/Grupo24/.utmp/RelWithDebInfo/4f2y5jt6/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/Usuario/Desktop/UNITY FILES/Grupo24/.utmp/RelWithDebInfo/4f2y5jt6/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/Usuario/Desktop/UNITY FILES/Grupo24/.utmp/RelWithDebInfo/4f2y5jt6/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/Usuario/Desktop/UNITY FILES/Grupo24/.utmp/RelWithDebInfo/4f2y5jt6/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
