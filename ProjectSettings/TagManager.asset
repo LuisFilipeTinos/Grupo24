@@ -9,6 +9,10 @@ TagManager:
   - PointText
   - TouchController
   - TouchText
+  - SoundSource
+  - SoundWindow
+  - SoundSlider
+  - SoundIcon
   layers:
   - Default
   - TransparentFX
