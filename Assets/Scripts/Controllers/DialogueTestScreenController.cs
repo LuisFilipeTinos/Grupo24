@@ -67,8 +67,8 @@ public class DialogueTestScreenController : MonoBehaviour
 
     public async void BackToMainMenu()
     {
-        artifactPointsController = GameObject.FindGameObjectWithTag("ArtifactController").GetComponent<ArtifactPointsController>();
-        touchPointsController = GameObject.FindGameObjectWithTag("TouchController").GetComponent<TouchPointsController>();
+        artifactPointsController = GameObject.FindGameObjectWithTag("ArtifactController")?.GetComponent<ArtifactPointsController>();
+        touchPointsController = GameObject.FindGameObjectWithTag("TouchController")?.GetComponent<TouchPointsController>();
 
         if (artifactPointsController != null)
             Destroy(artifactPointsController.gameObject);
